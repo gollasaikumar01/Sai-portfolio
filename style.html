@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaiKumar Golla Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img3.jpg" class="logo" alt="Sai Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring AI/ML Developer</p>
+                <h1>Hi, I'm <span>SAI KUMAR GOLLA</span><br>From MRCET</h1>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!----------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img1.jpg" alt="Sai Kumar Golla">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>II'm Sai Kumar Golla from Hyderabad, currently pursuing B.Tech in CSE (AI & ML) at Malla Reddy College of Engineering and Technology (MRCET). I’m passionate about AI, Machine Learning, and Web Development. I love taking on projects that challenge me to learn and grow. I'm also working on building a College Chat-bot and Technical Projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python & DSA</span><br>Problem-solving on HackerRank</li>
+                            <li><span>AI & Machine Learning</span><br>Learning via real-world projects</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Java & C</span><br>Strong basics from academic learning</li>
+                            <li><span>Git & GitHub</span><br>Version control and collaboration</li>
+                            <li><span>Database</span><br>Basics of SQL and MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+    <ul>
+        <li><span>Pursuing</span><br>B.Tech 3rd year at Malla Reddy College Of Engineering And Technology</li>
+        <li><span>2021-202</span><br>Diploma at Sri Sangameswara Government Polytechnic College</li>
+        <li><span>2020-2021</span><br>SSC at Kakatiya High School</li>
+    </ul>
+</div>
+
+
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li><span>Tech Learning</span><br>Self-learning AI, ML & Web Tech</li>
+                            <li><span>Certificates</span><br>Python Programming(Skill India),Intel AI For ALL, Oracle, and more</li>
+                            <li><span>Internship Search</span><br>Looking for government or certified internships</li>
+                            <li><span>Tollywood Lover</span><br>Big fan of Telugu cinema</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------projects----------->
+    <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <h2>College Chat</h2>
+                <p>A chatbot for the college that acts like a virtual guide—welcoming users, answering questions about departments, faculty, and admissions, and offering helpful info to anyone interested in joining. The design is thoughtful and friendly, with organized conversation flow and smart response handling. It even checks if the server is running and gives a smooth, chat-like experience with visual flair. All in all, it's an engaging way to make campus information more accessible and interactive.</p>
+                <p><strong>Tech Used:</strong> JavaScript, Flask (Python), Google Gemini API</p>
+            </div>
+            <div class="project">
+                <h2>📊 Student Result System</h2>
+                <p>A basic system to input and display student scores using Python and file handling techniques.</p>
+                <p><strong>Tech Used:</strong> Python, File I/O</p>
+            </div>
+            <div class="project">
+                <h2>🌐 Personal Portfolio Website</h2>
+                <p>Developed my own portfolio to showcase skills, education, and projects, hosted online for recruiters.</p>
+                <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!---------- contact section ----------->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-envelope"></i> default.neverletgo@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Sangareddy, Telangana</p>
+            <p><i class="fas fa-phone"></i> +91 6281255873</p>
+            <div class="social-icons">
+                <a href="https://github.com/gollasaikumar01" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/golla-saikumar-4a4059352" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const tablinks = document.querySelectorAll(".tab-links");
+    const tabcontents = document.querySelectorAll(".tab-contents");
+
+    function opentab(tabname) {
+        tablinks.forEach(link => link.classList.remove("active-link"));
+        tabcontents.forEach(content => content.classList.remove("active-tab"));
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    // Add fade-in animation to sections as you scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll("section, .project, .about-col-1 img").forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
